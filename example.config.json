@@ -1,9 +1,11 @@
 {
   "googleProjectId": "",
+  "file": "audio.wav",
   "audio": {
     "encoding": "",
     "sampleRateHertz": 0,
-    "languageCode": "en-US"
+    "languageCode": "en-US",
+    "profanityFilter": false
   },
   "saveFile": "transcription.txt"
 }
