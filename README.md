@@ -18,5 +18,15 @@ Next, move the `example.config.json` file into the newly created `dist` folder. 
 
 Modify your config values (the audio reference is on the [Google Cloud Docs](https://cloud.google.com/speech/reference/rest/v1/RecognitionConfig)) by specifying the output name and the Cloud Storage URL (gs://).
 
+To run the script, you can run these commands on a console session:
+
+```shell
+# Don't log messages
+$ ./start.sh
+
+# Log messages into log.txt
+$ ./start.sh > log.txt
+```
+
 ## Why did you make this?
 One of my family relatives is an interviewer, and he asked me for a way to convert a brute audio file into a text file. While this isn't perfect, it made his job much easier.
