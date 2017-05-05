@@ -1,4 +1,4 @@
-# AudioToSpeech
+# AudioToText
 Node.js application that uses Google's Cloud Speech API to convert long audios (up to 80 minutes) to text.
 
 ## Google Cloud Setup
