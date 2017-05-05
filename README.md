@@ -9,7 +9,7 @@ Once you are done, you will need to create a Cloud Storage segment, which will b
 
 Finally, you need to generate the credentials for your project. You can do so by clicking [here](https://console.cloud.google.com/apis/credentials). Please note that the Credentials format should be `json` and the type of credential should be a Service Account Key.
 
-Once you've created the key, you need to grant read access to your Cloud Storage segments to read the audio files.
+Once you've created the key, you need to grant read access to your Cloud Storage segments to read the audio files (by adding the 'Read GCS files' role to it).
 
 ## Actual Setup
 Install all the dependencies with `npm install` or `yarn`. Then, build the project (transform ES6 code to ES5 through Babel) with `npm run build` or `yarn run build`.
