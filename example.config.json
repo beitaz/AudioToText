@@ -1,0 +1,9 @@
+{
+  "googleProjectId": "",
+  "audio": {
+    "encoding": "",
+    "sampleRateHertz": 0,
+    "languageCode": "en-US"
+  },
+  "saveFile": "transcription.txt"
+}
