@@ -30,3 +30,5 @@ $ ./start.sh > log.txt
 
 ## Why did you make this?
 One of my family relatives is an interviewer, and he asked me for a way to convert a brute audio file into a text file. While this isn't perfect, it made his job much easier.
+
+This project also was a learning opportunity for me, as I had never used Google Cloud.

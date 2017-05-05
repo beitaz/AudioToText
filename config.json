@@ -1,9 +1,9 @@
 {
   "googleProjectId": "",
-  "file": "audio.wav",
+  "file": "gs://segment/audio.wav",
   "audio": {
-    "encoding": "",
-    "sampleRateHertz": 0,
+    "encoding": "LINEAR16",
+    "sampleRateHertz": 16000,
     "languageCode": "en-US",
     "profanityFilter": false
   },
