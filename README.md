@@ -5,18 +5,12 @@ Node.js application that uses Google's Cloud Speech API to convert long audios (
 
 First, follow the steps on [cloud.google.com](https://cloud.google.com/speech/docs/getting-started) to set up your project. You will need to create a project, enable the billing (by adding a credit card) and enable the Cloud Speech API for the newly created project.
 
-Once you are done, you will need to create a Cloud Storage segment, which will be the "bucket" where your large audio files will reside. You can create your segment by clicking [here](https://console.cloud.google.com/storage?_ga=1.35831520.1931673077.1494011931).
-
-Finally, you need to generate the credentials for your project. You can do so by clicking [here](https://console.cloud.google.com/apis/credentials). Please note that the Credentials format should be `json` and the type of credential should be a Service Account Key.
-
-Once you've created the key, you need to grant read access to your Cloud Storage segments to read the audio files (by adding the 'Read GCS files' role to it).
+Once you are done, you will need to generate the credentials for your project. You can do so by clicking [here](https://console.cloud.google.com/apis/credentials). Please note that the Key type should be Service Account Key and the Credentials format should be `json`.
 
 ## Actual Setup
 Install all the dependencies with `npm install` or `yarn`. Then, build the project (transform ES6 code to ES5 through Babel) with `npm run build` or `yarn run build`.
 
-Next, move the `example.config.json` file into the newly created `dist` folder. Next, modify the `start.sh` file by adding your Google Cloud Credentials you created in the previous steps.
-
-Modify your config values (the audio reference is on the [Google Cloud Docs](https://cloud.google.com/speech/reference/rest/v1/RecognitionConfig)) by specifying the output name and the Cloud Storage URL (gs://).
+Next, move the `config.json` file into the newly created `dist` folder. Next, modify the `start.sh` file by adding your Google Cloud Credentials you created in the previous steps.
 
 Finally, we need to modify our `config.json`:
 
@@ -40,12 +34,13 @@ To run the script, you can run these commands on a console session:
 # Don't log messages
 $ ./start.sh
 
-# Log messages into log.txt
+# Pipe app output to file
 $ ./start.sh > log.txt
 ```
 
 ## Audio file prequisites:
-The audio files should be less than a minute, and they should be placed under the `path` folder you specified on the `config.json` file. The file names should follow this pattern:
+
+The audio files duration should be less than a minute (if not, they will be rejected by the API), and they should be placed under the `path` folder you specified on the `config.json` file. The file names should follow this pattern:
 
 ```
 name-[Numeric ID].extension
