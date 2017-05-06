@@ -22,7 +22,7 @@ Finally, we need to modify our `config.json`:
 
 ```javascript
 {
-  "path": "audios", // The folder where files with name-[Numeric ID].ext are stored
+  "path": "audios", // The folder where files with name-[Numeric ID].ext are stored, relative to dist folder
   "audio": {
     "encoding": "LINEAR16", // The audio encoding [https://cloud.google.com/speech/reference/rpc/google.cloud.speech.v1beta1#google.cloud.speech.v1beta1.RecognitionConfig.AudioEncoding]
     "sampleRateHertz": 16000, // The sample rate https://cloud.google.com/speech/reference/rpc/google.cloud.speech.v1beta1#google.cloud.speech.v1beta1.RecognitionConfig
@@ -43,6 +43,15 @@ $ ./start.sh
 # Log messages into log.txt
 $ ./start.sh > log.txt
 ```
+
+## Audio file prequisites:
+The audio files should be less than a minute, and they should be placed under the `path` folder you specified on the `config.json` file. The file names should follow this pattern:
+
+```
+name-[Numeric ID].extension
+```
+
+Where the Numeric ID should be a possitive integer. You can change this behaviour on the [files.js](lib/files.js) file, on the `getFileId(filename)` method.
 
 ## Why did you make this?
 One of my family relatives is an interviewer, and he asked me for a way to convert a brute audio file into a text file. While this isn't perfect, it made his job much easier.
