@@ -1,11 +1,11 @@
 {
-  "googleProjectId": "",
-  "file": "gs://segment/audio.wav",
+  "path": "audios",
   "audio": {
     "encoding": "LINEAR16",
     "sampleRateHertz": 16000,
-    "languageCode": "en-US",
+    "languageCode": "es-US",
     "profanityFilter": false
   },
-  "saveFile": "transcription.txt"
+  "saveFile": "transcription.txt",
+  "debug": true
 }
